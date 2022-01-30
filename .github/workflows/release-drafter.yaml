@@ -1,0 +1,19 @@
+name: release-drafter
+
+on:
+  push:
+    branches:
+      - main
+      - beta/*
+  workflow_dispatch:
+
+jobs:
+  release-drafter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: release-drafter/release-drafter@v5
+        with:
+          config-name: release-drafter.yaml
+          disable-autolabeler: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

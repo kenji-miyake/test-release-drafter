@@ -1,0 +1,53 @@
+name-template: v$RESOLVED_VERSION
+tag-template: v$RESOLVED_VERSION
+categories: # https://github.com/commitizen/conventional-commit-types/blob/c3a9be4c73e47f2e8197de775f41d981701407fb/index.json
+  - title: Features
+    labels:
+      - feature
+  - title: Bug Fixes
+    labels:
+      - fix
+  - title: Documentation
+    labels:
+      - docs
+  - title: Styles
+    labels:
+      - style
+  - title: Code Refactoring
+    labels:
+      - refactor
+  - title: Performance Improvements
+    labels:
+      - perf
+  - title: Tests
+    labels:
+      - test
+  - title: Builds
+    labels:
+      - build
+  - title: Continuous Integrations
+    labels:
+      - ci
+  - title: Chores
+    labels:
+      - chore
+  - title: Reverts
+    labels:
+      - revert
+change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
+change-title-escapes: \<*_&
+version-resolver:
+  major:
+    labels:
+      - major
+  minor:
+    labels:
+      - minor
+  patch:
+    labels:
+      - patch
+  default: patch
+template: |
+  ## Changes
+
+  $CHANGES
