@@ -3,7 +3,7 @@ tag-template: v$RESOLVED_VERSION
 categories: # https://github.com/commitizen/conventional-commit-types/blob/c3a9be4c73e47f2e8197de775f41d981701407fb/index.json
   - title: Features
     labels:
-      - feature
+      - feat
   - title: Bug Fixes
     labels:
       - fix
